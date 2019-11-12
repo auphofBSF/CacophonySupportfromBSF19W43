@@ -17,16 +17,16 @@ consider [pep-8 package and module names](https://www.python.org/dev/peps/pep-00
 
 
 >Package name: 
->>`thecacophonyproject.serverclient`, i.e. `from  thecacophonyproject.serverclient.{interface} import {interface-class}`
+>>`cacophonyapi `, i.e. `from  cacophonyapi  import {interface-class}`
 
 >Project name: 
->>`thecacophonyproject.serverclient`, i.e. `pip install thecacophonyproject.serverclient`
+>>`cacophony.python-api`, i.e. `pip install cacophony.python-api`
 
 
 ```python
-from thecacophonyproject.serverclient.user import UserAPI  # user.py previously client.py
-from thecacophonyproject.serverclient.device import DeviceAPI
-from thecacophonyproject.serverclient.config import Config
+from cacophonyapi.user  import UserAPI  # user.py previously client.py
+from cacophonyapi.device  import DeviceAPI
+from cacophonyapi.config  import Config
 ```
 
 ### Testing:
@@ -70,11 +70,11 @@ TODO: Confirm contact details, license, author
 
 ```python
 setup(
-    name='TheCacophonyProject.ServerClient',
+    name='Cacophony.python_api',
     version=version,
     description="Cacophony Project REST API client for python",
     long_description=readme,
-    url='https://github.com/TheCacophonyProject/serverclient_python',
+    url='https://github.com/TheCacophonyProject/python-api',
     license='GNU AFFERO GENERAL PUBLIC License 3 19 November 2007',
     packages=find_packages(exclude=['tests']),
     test_suite='nose2.collector.collector',
@@ -85,19 +85,19 @@ setup(
 
     # metadata to display on PyPI
     author="Anthony Uphof, Giampaolo Ferraro, Cameron Ryan-Pears, Menno Finlay-Smits",
-    author_email="dev@cacphonyproject.org.nz",
+    author_email="coredev@cacophony.org.nz",
     keywords="cacophonyproject api client rest",
 
     project_urls={
-        "Bug Tracker": 'https://github.com/TheCacophonyProject/serverclient_python/issues',
-        "Documentation": 'https://github.com/TheCacophonyProject/serverclient_python/wiki',
-        "Source Code": 'https://github.com/TheCacophonyProject/serverclient_python',
+        "Bug Tracker": 'https://github.com/TheCacophonyProject/python-api',
+        "Documentation": 'https://docs.cacophony.org.nz',
+        "Source Code": 'https://github.com/TheCacophonyProject/python-api',
     },
 
     classifiers=[
-        'Development Status :: 1 - Alpha',
+        'Development Status :: 4 - Beta',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: GNU AFFERO GENERAL PUBLIC License 3 19 November 2007',
+        'License :: OSI Approved :: Apache Software License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3.6',
