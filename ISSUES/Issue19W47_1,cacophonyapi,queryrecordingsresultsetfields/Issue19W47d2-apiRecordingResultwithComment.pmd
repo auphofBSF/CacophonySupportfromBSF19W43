@@ -1,21 +1,30 @@
 
-#Issue,  cacophony-api, 19W47-1
-------------------------------------------
+# Issue,  cacophony-api, 19W47-1
+
+---
 
 > **api recordings query yields resultset with inconsistent fields**
 
-#### __Returns__
+## Returns
+
 > resultset with "comment" field
-#### __ Expected __
+
+## Expected
+
 > no comment field
-#### __ Desired __
-> comment field to be in result set consitently not periodic dependent on user previous queries.
+
+## Desired
+
+> comment field to be in result set consistently not periodic dependent on user previous queries.
 Also concerned what is happening in the API if the return result set can be altered ?
------------------------------------------
 
-*N.B. Setup code is hidden, look at the full  .pmd file for python code sections*
+---
 
------------------------------------------
+## NB
+
+- *Setup code is hidden, look at the full  [.pmd](./Issue19W47d2-apiRecordingResultwithComment.pmd) file for python code sections*
+
+---
 
 ```python, echo=False
 from datetime import datetime
@@ -39,11 +48,11 @@ cp_client=UserAPI(baseurl=config.api_url,
 """Confirm the client"""
 cp_client.version, cp_client.get_devices_as_json()
 ```
+
 Query the API using `api/v1/recordings?where……`
 
 the  `cacophonyapi.UserAPI.query` code is here:
 <https://github.com/TheCacophonyProject/python-api/blob/97055fc8db7467d78703204e975d28081271dc5a/src/cacophonyapi/user.py#0dTEPzkLWceF7z0koJaX1A>
-
 
 ```python, echo=True
 resultset=cp_client.query(endDate=strToSqlDateTime("2019-11-06 06:30:00"),startDate=strToSqlDateTime("2019-11-01 19:00:00"),
@@ -52,9 +61,7 @@ resultset=cp_client.query(endDate=strToSqlDateTime("2019-11-06 06:30:00"),startD
         tagmode="any")
 ```
 
-
 Looking at the result set reurned from the query
-
 
 ```python, echo=False
 rowOfInterest=258
@@ -65,24 +72,27 @@ resultset[rowOfInterest]['comment']
 df = pd.DataFrame(resultset)
 ```
 
-####**RESULT SET**
-------------------------------------------------------
+## RESULT SET analysis
 
-Number of records in result set:** <%len(resultset)%> **
+---
+
+Number of records in result set:**<%len(resultset)%>**
 
 The Row of interest is:**<%rowOfInterest%>**
 
-Is `comment` in fields of result set: ** <%'comment' in list(resultset[258].keys())%> **
+Is `comment` in fields of result set: **<%'comment' in list(resultset[258].keys())%>**
 
-The comment field value is: ** <%resultset[258]['comment']%> **
+The comment field value is: **<%resultset[258]['comment']%>**
 
 The Pandas Dataframe colums are:
-```
+
+```text
 <%df.columns%>
 ```
 
-
 and the values of row **<%rowOfInterest%>** are:
+
 ```python
 df.iloc[rowOfInterest]
 ```
+This document is created with pweave from [Issue19W47d2-apiRecordingResultwithComment.pmd](./Issue19W47d2-apiRecordingResultwithComment.pmd)
