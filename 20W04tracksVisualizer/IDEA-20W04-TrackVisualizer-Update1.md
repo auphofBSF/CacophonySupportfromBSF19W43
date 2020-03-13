@@ -29,8 +29,7 @@ Presentation of Observations details in recordings cover aspects of the visits s
 
 I believe this long duration visual presentation tool  is an important part of refining the visit Analysis and ultimately the visit reduction if that is what the mission is.
 
-<br>
-<br>
+
 | # | Use Case | How | IMAGES |
 | --- | -------- | --- | ------ |
 | 1 | The Trap co-ordinator wants to observe patterms over long time durations and be able to interact (for further event or classification annotation ) with recordings of animals passing through a camera's field of view.<br><br>This Usecase solution must enable the observer to do see  data patterns to enable human pattern discovery and hopefullysome recognition or ideas to aid in improving systems to which the mission the camera recordings are being dedicated . | Display thumbnails for a nights recording in a timestrip with relative spacing.<br>Display previous nights recordings as rows beneath each other.<br> <br>The thumbnails are ideally  zoomed in frames on the longest duration track showingthe target being tracked. It is possible in a multiple track recording that thethumbnails from each track are displayed consecutively in the overall timeline or are an in an animated gif format, cycling through representative frames of each track. The thumbnails are annotated with additional data, in consistent but distingushing formats to enable pattern observation. THis annotation may be overlay over film strip frames, or annotation tracks in parallel to the film strip that present data, under each frame.  These film strip annotation tracks can also have overlay elements.<br><br>Data elements can be displayed in icons, lines, or AlphaNumeric values, consideration being  given to color , density, conflict, consistency | ![image.png](.media/img_1.png)<br>![image.png](.media/img_2.png) |
@@ -40,5 +39,5 @@ I believe this long duration visual presentation tool  is an important part of 
 | 5 | Allow the Trap Co-ordinator to observe additional tags/events that have occurred | as in example a trap interaction icon is displayed | ![image.png](.media/img_4.png) |
 | 6 | Allow the Trap Co-ordinator to observeother aspects of the themal camera operation.<br>1\. Is the camera in an optimum location from a thermal background perspective<br>2\. Overlays of camera operational metrics\, ie Battery state\, FFC corrections\, sound lure activations | Thezoomed out icons in the filmstrip can be chosen as those that represent theaverage background condition. this then can demonstrate how that background ischanging over night and week. It can also demonstrate if there are cameraalgorithim issues.<br> <br>Byoverlaying on thumbnails or annotation tracks, battery state and other camera metrics or sound lure information avisual pattern can be gleaned by an operator. |  |
 |  |  |  |  |
-<br>
-<br>
+
+
